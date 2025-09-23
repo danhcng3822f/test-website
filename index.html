@@ -259,15 +259,15 @@
   });
 
   closePreviewBtn.addEventListener('click', () => {
-    previewFrame.srcdoc = '';
-    uploadUI.style.display = 'block';
-    const inputTabEl = document.getElementById('inputTab');
-    inputTabEl.style.visibility = 'visible';
-    inputTabEl.style.position = 'static';
-    previewPage.style.display = 'none';
-    fileInput.value = "";
-    fileNameDisplay.textContent = "Chưa chọn file";
-    viewWebBtn.disabled = true;
+  previewFrame.srcdoc = '';
+  uploadUI.style.display = 'block';
+  const inputTabEl = document.getElementById('inputTab');
+  inputTabEl.style.visibility = 'visible';
+  inputTabEl.style.position = 'static';
+  previewPage.style.display = 'none';
+  // Bỏ dòng fileInput.value = ""; để giữ file đã chọn
+  // fileNameDisplay.textContent = "Chưa chọn file"; // Có thể giữ hoặc bỏ tùy ý
+  viewWebBtn.disabled = true; // Nếu muốn nút Xem web vô hiệu hóa cho an toàn
   });
 
   // Nhập dữ liệu tab logic
